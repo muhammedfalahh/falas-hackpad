@@ -1,64 +1,78 @@
-# Fala’s Hackpad
+# Falas Hackpad
 
-Hey! This is my custom built macropad made as part of the Hackpad project.  
-The goal was to design something simple, clean, and fully functional while following all the project rules. This hackpad uses the Seeed XIAO RP2040 and is designed with a custom PCB and a fully 3D printed case.
+This is my custom Hackpad built for the Hackpad challenge.  
+The idea was to keep it simple, clean, and fully custom from schematic to PCB to case.
 
-I focused on keeping the design compact, easy to build, and reliable, while also making sure everything fits together properly in the final assembly.
+Everything here is open and easy to understand so anyone can learn from it or build their own version.
 
-## Overview
+---
 
-This is a four key macropad with a custom PCB and case.  
-The firmware is written using KMK and runs on CircuitPython.
+## Overall Hackpad
 
-Everything in this repository is structured so anyone can understand how the hackpad was built and how the parts fit together.
+This shows the full hackpad and how the PCB fits inside the case.
 
-## Hackpad Preview
+![Overall Hackpad](images/case-and-fit.png)
 
-Below are screenshots of the complete project.
+---
 
-1. Overall hackpad design and assembly  
-   This shows how the PCB and case fit together as a complete unit.
+## Schematic
 
-2. Schematic  
-   The electrical schematic used to design the PCB.
+The complete schematic used for this hackpad, including the microcontroller and switch connections.
 
-3. PCB layout  
-   The routed PCB design created in KiCad.
+![Schematic](images/schematic.png)
 
-4. Case design  
-   The top and bottom case parts and how they assemble around the PCB.
+---
 
-## Bill of Materials
+## PCB Layout
 
-1. Seeed XIAO RP2040  
-2. MX style mechanical switches x4  
-3. 1N4148 diodes x4  
-4. SK6812 Mini E RGB LEDs x2  
-5. M3 screws  
-6. 3D printed case parts
+The PCB layout showing switch placement, routing, and overall board design.
 
-All parts used are from the approved list for the Hackpad project.
+![PCB Layout](images/pcb-layout.png)
 
-## Repository Structure
+---
 
-The repository is organized into three main folders.
+## Case and Fit
 
-1. CAD  
-   Contains the final assembled 3D model of the hackpad exported as a STEP file.
+This shows the case design and how all parts fit together.
 
-2. PCB  
-   Contains the KiCad project files including the schematic and PCB layout.
+![Case and Fit](images/case-and-fit02.png)
 
-3. Firmware  
-   Contains the KMK firmware used to run the macropad.
+---
+
+## Bill of Materials BOM
+
+| Part | Quantity | Notes |
+|-----|----------|------|
+| Microcontroller | 1 | XIAO RP2040 or compatible |
+| Mechanical Switches | 4 | MX style |
+| Diodes | 4 | For switch inputs |
+| Custom PCB | 1 | Designed in KiCad |
+| Case | 1 | 3D printed |
+| USB Cable | 1 | Power and programming |
+
+---
 
 ## Firmware
 
-The firmware is written using KMK and runs on CircuitPython.  
-Each key is connected directly to a GPIO pin on the XIAO RP2040. The current keymap is simple and meant for testing, and it can be easily modified later.
+The firmware is written in CircuitPython.  
+It handles key input and basic macro functionality.
 
-## Final Notes
+You can find the firmware files inside the firmware folder.
 
-This project was a great learning experience and helped me understand PCB design, 3D case design, and firmware integration better. Everything here is designed to be buildable and practical.
+---
+
+## Project Structure
+
+- PCB contains the KiCad schematic and PCB files  
+- CAD contains the case design files  
+- Firmware contains the CircuitPython code  
+- images contains all screenshots used in this README  
+
+---
+
+## Notes
+
+This project was created for the Hackpad challenge and follows open source principles.  
+Feel free to fork it, improve it, or build your own version from it.
 
 Thanks for checking it out.
