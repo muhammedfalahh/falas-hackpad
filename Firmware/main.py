@@ -1,36 +1,30 @@
 import board
-
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.scanners.keypad import KeysScanner
 from kmk.keys import KC
 from kmk.modules.macros import Macros
 
 keyboard = KMKKeyboard()
-
-# macros support (might use later)
 keyboard.modules.append(Macros())
 
-# pins used on the PCB (change if needed)
 PINS = [
+    board.D0,
     board.D1,
     board.D2,
     board.D3,
     board.D4,
+    board.D5,
 ]
 
-# direct pin setup (no matrix)
 keyboard.matrix = KeysScanner(
     pins=PINS,
     value_when_pressed=False,
 )
 
-# simple test keymap
 keyboard.keymap = [
     [
-        KC.A,
-        KC.B,
-        KC.C,
-        KC.D,
+        KC.A, KC.B, KC.C,
+        KC.D, KC.E, KC.F,
     ]
 ]
 
